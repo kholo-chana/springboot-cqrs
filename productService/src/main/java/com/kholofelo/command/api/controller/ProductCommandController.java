@@ -21,7 +21,7 @@ public class ProductCommandController {
     }
 
     @PostMapping
-    public String addProduct(@RequestBody ProductRestModel productRestModel){
+    public String addProduct(@RequestBody ProductRestModel productRestModel) {
 
         CreateProductCommand createProductCommand =
                 CreateProductCommand.builder()
@@ -30,7 +30,6 @@ public class ProductCommandController {
                         .price(productRestModel.getPrice())
                         .quantity(productRestModel.getQuantity())
                         .build();
-
         String result = commandGateway.sendAndWait(createProductCommand);
         return result;
     }

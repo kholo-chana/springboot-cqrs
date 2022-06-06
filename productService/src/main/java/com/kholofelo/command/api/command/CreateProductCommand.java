@@ -15,5 +15,4 @@ public class CreateProductCommand {
     private String name;
     private BigDecimal price;
     private Integer quantity;
-
 }
